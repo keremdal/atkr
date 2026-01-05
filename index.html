@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ATK ROV | Underwater Robotics Team</title>
+
+<meta name="description" content="ATK ROV – Su altı robotik, otonomi ve yapay zeka odaklı öğrenci takımı">
+<meta name="theme-color" content="#0b1220">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  background:#0b1220;
+  color:#eaf1ff;
+}
+
+/* ===== NAV ===== */
+nav{
+  position:fixed;top:0;width:100%;z-index:999;
+  background:rgba(11,18,32,.9);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(255,255,255,.1);
+}
+.navbar{
+  max-width:1200px;
+  margin:auto;
+  padding:14px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.logo{
+  font-size:22px;
+  font-weight:800;
+  background:linear-gradient(90deg,#46d6ff,#7c5cff);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+.nav-links{
+  display:flex;
+  gap:20px;
+}
+.nav-links a{
+  color:#b8c2ff;
+  font-weight:600;
+}
+.nav-links a:hover{color:#fff}
+
+/* ===== HERO ===== */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:100px 20px 60px;
+}
+.hero h1{
+  font-size:clamp(32px,5vw,64px);
+  margin-bottom:16px;
+}
+.hero span{color:#46d6ff}
+.hero p{
+  color:#aab3e6;
+  font-size:18px;
+  margin-bottom:30px;
+}
+.hero-buttons{
+  display:flex;
+  gap:16px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+/* ===== BUTTON ===== */
+.btn{
+  padding:14px 24px;
+  border-radius:14px;
+  font-weight:700;
+  border:none;
+  cursor:pointer;
+}
+.primary{
+  background:linear-gradient(135deg,#46d6ff,#7c5cff);
+  color:#061020;
+}
+.secondary{
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.2);
+  color:#fff;
+}
+
+/* ===== SECTION ===== */
+section{
+  max-width:1200px;
+  margin:auto;
+  padding:90px 20px;
+}
+h2{
+  font-size:36px;
+  margin-bottom:10px;
+}
+.desc{
+  color:#9aa6e8;
+  margin-bottom:40px;
+}
+
+/* ===== GRID ===== */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+.card{
+  background:#101a33;
+  border-radius:20px;
+  padding:24px;
+  border:1px solid rgba(255,255,255,.1);
+  transition:.3s;
+}
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 15px 35px rgba(0,0,0,.4);
+}
+
+/* ===== TEAM ===== */
+.avatar{
+  width:52px;
+  height:52px;
+  border-radius:16px;
+  background:linear-gradient(135deg,#46d6ff,#7c5cff);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:800;
+  margin-bottom:12px;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  text-align:center;
+  padding:30px;
+  border-top:1px solid rgba(255,255,255,.1);
+  color:#9aa6e8;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+  .nav-links{display:none}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="navbar">
+    <div class="logo">ATK ROV</div>
+    <div class="nav-links">
+      <a href="#about">Hakkımızda</a>
+      <a href="#vehicle">Araç</a>
+      <a href="#projects">Projeler</a>
+      <a href="#team">Takım</a>
+      <a href="#contact">İletişim</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <h1>Su Altında <span>Akıllı</span> Sistemler</h1>
+    <p>ATK ROV – Su altı robotik, otonomi ve yapay zeka odaklı öğrenci takımı</p>
+    <div class="hero-buttons">
+      <button class="btn primary" onclick="goInstagram()">Instagram’dan Ulaş</button>
+      <button class="btn secondary" onclick="scrollTo('vehicle')">Aracı İncele</button>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>Hakkımızda</h2>
+  <p class="desc">
+    ATK ROV, su altı araçları geliştirerek yarışmalara katılan,
+    yazılım, mekanik ve elektronik alanlarında çalışan bir takımdır.
+  </p>
+
+  <div class="grid">
+    <div class="card">ROV Mekanik Tasarım</div>
+    <div class="card">Otonom Kontrol</div>
+    <div class="card">Görüntü İşleme & AI</div>
+  </div>
+</section>
+
+<!-- VEHICLE -->
+<section id="vehicle">
+  <h2>Su Altı Aracımız</h2>
+  <p class="desc">Araç görsellerini ve teknik detayları sen eklersin.</p>
+  <div class="card">🔧 Araç açıklama alanı</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projeler</h2>
+  <div class="grid">
+    <div class="card">Yer İstasyonu Yazılımı</div>
+    <div class="card">Otonom Görev Sistemi</div>
+    <div class="card">YOLO / OpenCV</div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team">
+  <h2>Takım</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="avatar">K</div>
+      <b>Kerem</b><br>
+      <small>Takım Kaptanı / Yazılım</small>
+    </div>
+    <div class="card">Üye</div>
+    <div class="card">Üye</div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>İletişim</h2>
+  <p class="desc">
+    Bizimle **sadece Instagram üzerinden** iletişime geçebilirsiniz.
+  </p>
+
+  <button class="btn primary" onclick="goInstagram()">
+    📩 Instagram’dan Mesaj At
+  </button>
+</section>
+
+<footer>
+  © <span id="year"></span> ATK ROV Takımı
+</footer>
+
+<script>
+const INSTAGRAM_URL = "https://instagram.com/ATKROV"; // BURAYI KENDİ HESABINLA DEĞİŞTİR
+
+function goInstagram(){
+  window.open(INSTAGRAM_URL,"_blank");
+}
+function scrollTo(id){
+  document.getElementById(id).scrollIntoView({behavior:"smooth"});
+}
+document.getElementById("year").innerText = new Date().getFullYear();
+</script>
+
+</body>
+</html>
